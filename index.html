@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesriCrumbs - Snack Makaroni Kekinian</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Rapi hero section kanan kiri */
+    .hero-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @media (max-width: 600px) {
+        .hero-section {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    .hero-section {
+        width: 100%;
+        background: url('assets/background1.jpg') center center/cover no-repeat #fff;
+        padding: 4rem 0 4rem 0;
+        min-height: 700px;
+    }
+    .hero-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .hero-img-box {
+        flex: 1 1 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 220px;
+        max-width: 400px;
+        height: 100%;
+    }
+    .hero-img {
+        width: 100%;
+        max-width: 350px;
+        height: 420px;
+        min-height: 220px;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    }
+    .hero-content {
+        flex: 2 1 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        background: rgba(249, 249, 249, 0.85);
+        border-radius: 1.2rem;
+        padding: 2.5rem 2rem 2.5rem 2rem;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        min-width: 260px;
+        max-width: 700px;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.7rem;
+        word-break: break-word;
+        color: #d35400;
+        letter-spacing: 1px;
+    }
+    .accent {
+        color: #ff9800;
+        font-weight: bold;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    }
+    .hero-desc {
+        font-size: 1.15rem;
+        color: #444;
+        word-break: break-word;
+        margin-bottom: 1.2rem;
+        line-height: 1.7;
+    }
+    .hero-btn, .order-btn-glass {
+        display: inline-block;
+        background: #ff9800;
+        color: #fff;
+        padding: 0.85rem 2.2rem;
+        border-radius: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: background 0.2s;
+        width: fit-content;
+        align-self: flex-start;
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+        border: none;
+        cursor: pointer;
+    }
+    .hero-btn:hover, .order-btn-glass:hover {
+        background: #e67e22;
+    }
+    .hero-detail {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+    }
+    .hero-iklan, .hero-toko {
+        background: #fffbe6;
+        border-radius: 0.75rem;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+        flex: 1 1 180px;
+        min-width: 180px;
+        box-sizing: border-box;
+    }
+    .hero-iklan h3, .hero-toko h3 {
+        color: #d35400;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+    .hero-toko ul {
+        margin: 0;
+        padding-left: 1.2rem;
+    }
+    @media (max-width: 900px) {
+        .hero-flex {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .hero-content {
+          padding: 1.2rem;
+          max-width: 100%;
+        }
+        .hero-img-box {
+          max-width: 100%;
+        }
+        .hero-img {
+          height: 300px;
+        }
+    }
+    @media (max-width: 600px) {
+        .hero-section {
+          padding: 0.5rem 0;
+          min-height: 400px;
+        }
+        .hero-img-box {
+          min-width: 120px;
+        }
+        .hero-content {
+          padding: 0.7rem;
+          min-width: 0;
+        }
+        .hero-title {
+          font-size: 1.3rem;
+        }
+        .hero-detail {
+          gap: 1rem;
+        }
+        .hero-img {
+          height: 180px;
+        }
+    }
+    .kontak-section {
+        padding: 3rem 0 2rem 0;
+        background: #fffbe6;
+      }
+      .kontak-box {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
+      }
+      .kontak-link {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        background: #fff;
+        border-radius: 2rem;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
+        color: #d35400;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        transition: background 0.18s, color 0.18s;
+      }
+      .kontak-link:hover {
+        background: #ff9800;
+        color: #fff;
+      }
+      .kontak-icon {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+      }
+      @media (max-width: 600px) {
+        .kontak-box {
+          gap: 1rem;
+        }
+        .kontak-link {
+          font-size: 1rem;
+          padding: 0.6rem 1rem;
+        }
+        .kontak-icon {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    /* Responsive Glass Header (Navbar) */
+    .glass-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      backdrop-filter: blur(8px);
+      width: 100%;
+      transition: background 0.2s;
+    }
+    .glass-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0rem 1vw;
+      max-width: 20000px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo-round {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: contain;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+    }
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #d35400;
+      margin: 0;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: #888;
+      font-weight: 500;
+    }
+    .nav-glass {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .nav-item {
+      color: #d35400;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 1.08rem;
+      padding: 0.4rem 1rem;
+      border-radius: 1.5rem;
+      transition: background 0.18s, color 0.18s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      cursor: pointer;
+    }
+    .nav-item:hover, .nav-item:active, .nav-item.active {
+      background: #ff9800;
+      color: #fff !important;
+    }
+    @media (max-width: 900px) {
+      .glass-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.7rem 3vw;
+      }
+      .nav-glass {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .glass-header .container {
+        padding: 0.5rem 2vw;
+      }
+      .logo-title {
+        gap: 0.5rem;
+      }
+      .brand {
+        font-size: 1.1rem;
+      }
+      .subtitle {
+        font-size: 0.8rem;
+      }
+      .nav-glass {
+        gap: 0.5rem;
+      }
+      .nav-item {
+        font-size: 0.98rem;
+        padding: 0.3rem 0.7rem;
+      }
+    }
+    /* End Responsive Glass Header */
+    </style>
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo-title">
+                <img src="../assets/Logobisnis.jpg" alt="Logo DesriCrumbs" class="logo-round">
+                <div>
+                    <h1 class="brand">DesriCrumbs</h1>
+                    <span class="subtitle">Snack Makaroni Premium</span>
+                </div>
+            </div>
+            <nav class="nav-glass">
+                <a href="#hero" class="nav-item">Beranda</a>
+                <a href="#produk" class="nav-item">Produk</a>
+                <a href="#kemplang" class="nav-item">Kemplang</a>
+                <a href="#pesan" class="nav-item">Pesan</a>
+                <a href="#kontak" class="nav-item">Kontak</a>
+                <a href="tentang.html" class="nav-item" target="_blank">Tentang</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section" id="hero">
+      <div class="hero-flex">
+        <div class="hero-content">
+          <h2 class="hero-title">Mau Ngemil <span class="accent">Makaroni</span> yang Bikin Hidup Makin Seru?</h2>
+          <p class="hero-desc">Cobain <b>DesriCrumbs</b> dong! Snack makaroni kekinian, rasanya gokil, kemasannya kece, dan pastinya bikin nagih. Cuma di sini, ngemil jadi makin asik, gaul, dan nggak ngebosenin. Udah banyak yang repeat order, masa kamu nggak coba?</p>
+          <a href="#pesan" class="hero-btn">Gaskeun Pesan Sekarang!</a>
+          <div class="hero-detail">
+            <div class="hero-iklan">
+              <h3>Promo Gokil!</h3>
+              <p>Order pertama DISKON 10%! Jangan sampe kehabisan, buruan cekout!</p>
+            </div>
+            <div class="hero-toko">
+              <h3>Info Gaul</h3>
+              <ul>
+                <li>Basecamp: Cikalong - Bandung</li>
+                <li>Kirim ke seluruh Indonesia, santuy!</li>
+                <li>Dijamin fresh, halal, dan anti zonk!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blok Eksklusif Kemplang -->
+    <section class="kemplang-section" id="kemplang">
+        <div class="container">
+            <h2 class="section-title" style="color:#d35400;">Menu Eksklusif:</h2>
+            <div class="kemplang-card" style="background:#fffbe6;border-radius:1.2rem;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:2rem 1.5rem;margin:2rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:2rem;">
+                <img src="../assets/kemplang.jpg" alt="Kemplang" style="width:180px;height:140px;object-fit:cover;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">
+                <div style="flex:1;min-width:220px;">
+                    <h3 style="color:#ff9800;font-size:1.5rem;font-weight:800;margin-bottom:0.7rem;">Kemplang Gurih Asli Cikalong</h3>
+                    <div style="font-size:1.08rem;color:#444;margin-bottom:1.1rem;line-height:1.7;">Camilan legendaris khas Cikalong! Kemplang DesriCrumbs dibuat dari bahan pilihan, dipanggang renyah, dan cocok untuk semua suasana. Rasanya gurih, aromanya khas, dan bikin nagih. Wajib coba buat pecinta snack tradisional!</div>
+                    <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+                        <span style="background:#ffd180;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Kecil <b>Rp8.000</b></span>
+                        <span style="background:#ffd180;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Besar <b>Rp15.000</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="produk-section" id="produk">
+        <div class="container">
+            <h2 class="section-title">Varian Rasa & Harga</h2>
+            <div class="produk-grid">
+            <div class="produk-card">
+                <div class="produk-badge gold">Best Seller</div>
+                <img src="../assets/1.jpg" alt="Original" class="produk-img">
+                <h3 class="produk-title">Original</h3>
+                <div class="produk-desc">Gurihnya bikin nagih, temen ngemil sejuta umat! Wajib coba kalau belum pernah, auto susah berhenti!</div>
+                <div class="produk-harga">
+                    <span class="harga-badge">Kecil <b>Rp5.000</b></span>
+                    <span class="harga-badge">Sedang <b>Rp10.000</b></span>
+                    <span class="harga-badge">Besar <b>Rp15.000</b></span>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-badge green">Favorit</div>
+                <img src="../assets/2.jpg" alt="Original Daun Jeruk" class="produk-img">
+                <h3 class="produk-title">Original Daun Jeruk</h3>
+                <div class="produk-desc">Aromanya wangi, rasanya fresh banget! Sensasi daun jeruknya bikin ngemil makin asik dan seger.</div>
+                <div class="produk-harga">
+                    <span class="harga-badge">Kecil <b>Rp5.000</b></span>
+                    <span class="harga-badge">Sedang <b>Rp10.000</b></span>
+                    <span class="harga-badge">Besar <b>Rp15.000</b></span>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-badge red">Hot!</div>
+                <img src="../assets/3.jpg" alt="Pedas Cikur" class="produk-img">
+                <h3 class="produk-title">Pedas Cikur</h3>
+                <div class="produk-desc">Pedasnya nampol, aroma cikurnya khas banget! Cocok buat yang suka tantangan dan sensasi pedas unik.</div>
+                <div class="produk-harga">
+                    <span class="harga-badge">Kecil <b>Rp5.000</b></span>
+                    <span class="harga-badge">Sedang <b>Rp10.000</b></span>
+                    <span class="harga-badge">Besar <b>Rp15.000</b></span>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-badge orange">Limited</div>
+                <img src="../assets/4.jpg" alt="Pedas Daun Jeruk" class="produk-img">
+                <h3 class="produk-title">Pedas Daun Jeruk</h3>
+                <div class="produk-desc">Pedas segar, aroma daun jeruknya nendang! Camilan anti mainstream, bikin mulut nggak bisa berhenti ngunyah.</div>
+                <div class="produk-harga">
+                    <span class="harga-badge">Kecil <b>Rp5.000</b></span>
+                    <span class="harga-badge">Sedang <b>Rp10.000</b></span>
+                    <span class="harga-badge">Besar <b>Rp15.000</b></span>
+                </div>
+            </div>
+            <div class="produk-card">
+                <div class="produk-badge pink">Baru!</div>
+                <img src="../assets/5.jpg" alt="Pedas Manis" class="produk-img">
+                <h3 class="produk-title">Pedas Manis</h3>
+                <div class="produk-desc">Manisnya dapet, pedasnya juga dapet! Kombinasi rasa yang bikin mood naik dan nggak ngebosenin.</div>
+                <div class="produk-harga">
+                    <span class="harga-badge">Kecil <b>Rp5.000</b></span>
+                    <span class="harga-badge">Sedang <b>Rp10.000</b></span>
+                    <span class="harga-badge">Besar <b>Rp15.000</b></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+    /* Produk Section Styling Baru */
+    .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .produk-card {
+      background: #fff;
+      border-radius: 1.2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      transition: transform 0.18s, box-shadow 0.18s;
+      border: 1.5px solid #ffe0b2;
+    }
+    .produk-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      border-color: #ffd180;
+    }
+    .produk-badge {
+      position: absolute;
+      top: 1.1rem;
+      left: 1.1rem;
+      padding: 0.35rem 1.1rem;
+      border-radius: 1rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      z-index: 2;
+    }
+    .produk-badge.gold { background: linear-gradient(90deg,#ffd700,#ff9800); color: #a65c00; }
+    .produk-badge.green { background: linear-gradient(90deg,#43e97b,#38f9d7); color: #006d3c; }
+    .produk-badge.red { background: linear-gradient(90deg,#ff5858,#f09819); color: #fff; }
+    .produk-badge.orange { background: linear-gradient(90deg,#ffb347,#ffcc33); color: #a65c00; }
+    .produk-badge.pink { background: linear-gradient(90deg,#ff758c,#ff7eb3); color: #fff; }
+    .produk-img {
+      width: 100%;
+      max-width: 170px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 0.8rem;
+      margin-bottom: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .produk-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #d35400;
+      margin: 0.2rem 0 0.7rem 0;
+      text-align: center;
+    }
+    .produk-desc {
+      font-size: 1.02rem;
+      color: #444;
+      margin-bottom: 1.1rem;
+      text-align: center;
+      min-height: 44px;
+    }
+    .produk-harga {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0.2rem;
+    }
+    .harga-badge {
+      background: #fffbe6;
+      color: #d35400;
+      border-radius: 1.1rem;
+      padding: 0.32rem 1.1rem;
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      border: 1px solid #ffe0b2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      display: inline-block;
+    }
+    @media (max-width: 600px) {
+      .produk-grid {
+        gap: 1.1rem;
+        margin-top: 1.2rem;
+      }
+      .produk-card {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+      }
+      .produk-img {
+        max-width: 110px;
+        height: 80px;
+      }
+      .produk-title {
+        font-size: 1.05rem;
+      }
+      .produk-desc {
+        font-size: 0.93rem;
+      }
+      .harga-badge {
+        font-size: 0.89rem;
+        padding: 0.22rem 0.7rem;
+      }
+    }
+    /* End Produk Section Styling Baru */
+    </style>
+            </div>
+        </div>
+    </section>
+    <section class="pesan-section" id="pesan">
+        <div class="container">
+            <h2 class="section-title">Form Pemesanan</h2>
+            <form id="pesananForm" class="form-glass">
+                <div class="form-row" style="display:flex;gap:2rem;align-items:center;justify-content:center;flex-wrap:wrap;">
+                    <div style="flex:1;min-width:260px;display:flex;flex-direction:column;gap:1rem;justify-content:center;">
+                        <div class="form-group">
+                            <label for="nama">Nama Pemesan</label>
+                            <input type="text" id="nama" name="nama" placeholder="Nama Pemesan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea id="alamat" name="alamat" placeholder="Alamat Pemesan" required rows="3" style="resize:vertical;width:100%;font-family:inherit;font-size:1rem;padding:0.5rem 0.75rem;border-radius:0.5rem;border:1px solid #ccc;"></textarea>
+                        </div>
+                    </div>
+                    <div class="preview-foto" style="flex:1;min-width:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:0;">
+                        <label style="margin-bottom:0.5rem;color:#d35400;font-weight:500;">Preview Varian</label>
+                        <img src="../assets/1.jpg" alt="Preview Varian" id="fotoVarian" class="preview-img">
+                    </div>
+                </div>
+                <div id="varianContainer">
+                    <div class="form-row" style="gap:1rem;">
+                        <div class="form-group" style="flex:1;">
+                            <label for="snack">Jenis Snack</label>
+                            <select id="snack" name="snack" required>
+                                <option value="makaroni">Makaroni</option>
+                                <option value="kemplang">Kemplang</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label for="varian">Varian</label>
+                            <select id="varian" name="varian" required>
+                                <option value="original" data-img="../assets/1.jpg">Original</option>
+                                <option value="original-daun-jeruk" data-img="../assets/2.jpg">Original Daun Jeruk</option>
+                                <option value="pedas-cikur" data-img="../assets/3.jpg">Pedas Cikur</option>
+                                <option value="pedas-daun-jeruk" data-img="../assets/4.jpg">Pedas Daun Jeruk</option>
+                                <option value="pedas-manis" data-img="../assets/1.jpg">Pedas Manis</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label for="ukuran">Ukuran</label>
+                            <select id="ukuran" name="ukuran" required>
+                                <option value="kecil">Kecil (Rp5.000)</option>
+                                <option value="sedang">Sedang (Rp10.000)</option>
+                                <option value="besar">Besar (Rp15.000)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label for="jumlah">Jumlah</label>
+                            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required placeholder="Jumlah">
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="tambahVarianBtn" class="order-btn-glass" style="margin-bottom:1rem;">+ Tambah Pilih Varian Lain</button>
+                <script>
+                // Preview foto mengikuti select varian manapun yang terakhir diubah
+                function updatePreview(select) {
+                    // Cek jika ada select snack di baris yang sama
+                    var row = select.closest('.form-row');
+                    var snackSelect = row ? row.querySelector('select[name="snack"], select[name="snack[]"]') : null;
+                    var snackValue = snackSelect ? snackSelect.value : null;
+                    if (snackValue === 'kemplang') {
+                        fotoVarian.src = '../assets/kemplang.jpg';
+                        return;
+                    }
+                    var selected = select.options[select.selectedIndex];
+                    var imgSrc = selected.getAttribute('data-img');
+                    if (imgSrc) {
+                        fotoVarian.src = imgSrc;
+                    }
+                }
+
+                var fotoVarian = document.getElementById('fotoVarian');
+                // Event listener untuk varian utama
+                var varianUtama = document.getElementById('varian');
+                varianUtama.addEventListener('change', function() {
+                    updatePreview(varianUtama);
+                });
+
+                // Event listener untuk snack utama
+                var snackUtama = document.getElementById('snack');
+                if (snackUtama) {
+                  snackUtama.addEventListener('change', function() {
+                    if (snackUtama.value === 'kemplang') {
+                      fotoVarian.src = '../assets/kemplang.jpg';
+                    } else {
+                      updatePreview(varianUtama);
+                    }
+                  });
+                }
+
+                // Event listener untuk varian tambahan
+                function addVarianListener(select) {
+                    select.addEventListener('change', function() {
+                        updatePreview(select);
+                    });
+                }
+
+                // Event listener untuk snack tambahan
+                function addSnackListener(snackSelect, varianSelect) {
+                  snackSelect.addEventListener('change', function() {
+                    if (snackSelect.value === 'kemplang') {
+                      fotoVarian.src = '../assets/kemplang.jpg';
+                    } else {
+                      updatePreview(varianSelect);
+                    }
+                  });
+                }
+
+                // Fungsi hapus baris varian tambahan
+                function addDeleteButton(row) {
+                    var btn = row.querySelector('.hapus-varian-btn');
+                    btn.addEventListener('click', function() {
+                        row.remove();
+                    });
+                }
+
+                document.getElementById('tambahVarianBtn').onclick = function() {
+                    var container = document.getElementById('varianContainer');
+                    var newRow = document.createElement('div');
+                    newRow.className = 'form-row';
+                    newRow.style.gap = '1rem';
+                    newRow.style.alignItems = 'center';
+                    newRow.innerHTML = `
+                        <div class="form-group" style="flex:1;">
+                            <label>Snack</label>
+                            <select name="snack[]" required>
+                                <option value="makaroni">Makaroni</option>
+                                <option value="kemplang">Kemplang</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label>Varian</label>
+                            <select name="varian[]" class="varian-tambahan" required>
+                                <option value="original" data-img="../assets/1.jpg">Original</option>
+                                <option value="original-daun-jeruk" data-img="../assets/2.jpg">Original Daun Jeruk</option>
+                                <option value="pedas-cikur" data-img="../assets/3.jpg">Pedas Cikur</option>
+                                <option value="pedas-daun-jeruk" data-img="../assets/4.jpg">Pedas Daun Jeruk</option>
+                                <option value="pedas-manis" data-img="../assets/1.jpg">Pedas Manis</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;">
+                            <label>Ukuran</label>
+                            <select name="ukuran[]" required>
+                                <option value="kecil">Kecil (Rp5.000)</option>
+                                <option value="sedang">Sedang (Rp10.000)</option>
+                                <option value="besar">Besar (Rp15.000)</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex:1;display:flex;align-items:center;gap:0.5rem;">
+                            <div style="flex:1;display:flex;flex-direction:column;">
+                                <label>Jumlah</label>
+                                <input type="number" name="jumlah[]" min="1" value="1" required placeholder="Jumlah" style="height:10px;">
+                            </div>
+                            <button type="button" class="hapus-varian-btn" title="Hapus Varian" tabindex="0">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="5.5" y="9.5" width="1.5" height="6" rx="0.75" fill="#ff4d4f"/>
+                                  <rect x="10.25" y="9.5" width="1.5" height="6" rx="0.75" fill="#ff4d4f"/>
+                                  <rect x="15" y="9.5" width="1.5" height="6" rx="0.75" fill="#ff4d4f"/>
+                                  <rect x="4" y="6" width="14" height="2" rx="1" fill="#ff9800"/>
+                                  <rect x="7" y="4" width="8" height="2" rx="1" fill="#ff9800"/>
+                                </svg>
+                            </button>
+                        </div>
+                    `;
+                    container.appendChild(newRow);
+                    // Tambahkan event listener ke select varian tambahan
+                    var selectTambahan = newRow.querySelector('select.varian-tambahan');
+                    addVarianListener(selectTambahan);
+                    // Tambahkan event listener ke tombol hapus
+                    addDeleteButton(newRow);
+                    // Tambahkan event listener ke select snack tambahan
+                    var snackTambahan = newRow.querySelector('select[name="snack[]"]');
+                    if (snackTambahan && selectTambahan) {
+                      addSnackListener(snackTambahan, selectTambahan);
+                    }
+                };
+                // Inisialisasi event listener pada varian utama saat halaman dimuat
+                updatePreview(varianUtama);
+                </script>
+                <button type="submit" class="order-btn-glass">Pesan Sekarang</button>
+            </form>
+            <div id="pesanSukses" class="pesan-sukses-glass" style="display:none;">
+                <h3>Terima kasih sudah memesan DesriCrumbs!</h3>
+                <p>Pesanan Anda akan segera diproses.</p>
+            </div>
+        </div>
+    </section>
+    <section class="kontak-section" id="kontak">
+        <div class="container">
+            <h2 class="section-title">Kontak & Sosial Media</h2>
+            <div class="kontak-box">
+                <a href="https://www.instagram.com/__desrii_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="kontak-link" target="_blank" rel="noopener">
+                  <img src="../assets/instagram.png" alt="Instagram" class="kontak-icon" />
+                  <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/6282117862420" class="kontak-link" target="_blank" rel="noopener">
+                  <img src="../assets/whatsapp.png" alt="WhatsApp" class="kontak-icon" />
+                  <span>WhatsApp</span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sriisukmawati18@gmail.com" class="kontak-link" target="_blank" rel="noopener">
+                  <img src="../assets/gmail.png" alt="Email" class="kontak-icon" />
+                  <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-glass" style="background: linear-gradient(90deg,#fffbe6 60%,#ffe0b2 100%);border-top:2px solid #ffd180;margin-top:2.5rem;">
+      <div class="container" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.7rem 0 1.2rem 0;gap:0.7rem;">
+        <div style="display:flex;align-items:center;gap:0.7rem;">
+          <img src="../assets/Logobisnis.jpg" alt="Logo DesriCrumbs" style="width:48px;height:48px;border-radius:50%;box-shadow:0 1px 6px rgba(0,0,0,0.08);background:#fff;">
+          <span style="font-size:1.25rem;font-weight:700;color:#d35400;letter-spacing:1px;">DesriCrumbs</span>
+        </div>
+        <div style="font-size:1.05rem;color:#a65c00;font-weight:500;">Snack Makaroni & Kemplang Kekinian</div>
+        <div style="display:flex;gap:1.2rem;margin:0.5rem 0 0.2rem 0;">
+          <a href="https://www.instagram.com/__desrii_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.18s;"><img src="../assets/instagram.png" alt="Instagram" style="width:22px;height:22px;"></a>
+          <a href="https://wa.me/6282117862420" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.18s;"><img src="../assets/whatsapp.png" alt="WhatsApp" style="width:22px;height:22px;"></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@sriisukmawati18@gmail.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,0.07);transition:background 0.18s;"><img src="../assets/gmail.png" alt="Email" style="width:22px;height:22px;"></a>
+        </div>
+        <div style="font-size:0.98rem;color:#b88b4a;margin-top:0.5rem;">&copy; 2025 DesriCrumbs. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+</div>
+<script>
+// Script submit WhatsApp langsung di sini agar pasti jalan setelah form ada
+document.addEventListener('DOMContentLoaded', function() {
+  var pesananForm = document.getElementById('pesananForm');
+  if (!pesananForm) return;
+  pesananForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Ambil data utama
+    const nama = pesananForm.querySelector('#nama').value.trim();
+    const alamat = pesananForm.querySelector('#alamat').value.trim();
+    // Ambil varian utama
+    const snackUtama = pesananForm.querySelector('#snack').value;
+    const varianUtama = pesananForm.querySelector('#varian').options[pesananForm.querySelector('#varian').selectedIndex].text;
+    const ukuranUtama = pesananForm.querySelector('#ukuran').options[pesananForm.querySelector('#ukuran').selectedIndex].text;
+    const jumlahUtama = pesananForm.querySelector('#jumlah').value;
+
+    // Ambil varian tambahan
+    const rows = pesananForm.querySelectorAll('#varianContainer .form-row');
+    let pesananList = [];
+    // Baris pertama (utama)
+    pesananList.push(`- ${snackUtama.charAt(0).toUpperCase() + snackUtama.slice(1)} | ${varianUtama} | ${ukuranUtama} | Jumlah: ${jumlahUtama}`);
+    // Baris tambahan (jika ada)
+    if (rows.length > 1) {
+      for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        const snack = row.querySelector('select[name="snack[]"]').value;
+        const varian = row.querySelector('select[name="varian[]"]').options[row.querySelector('select[name="varian[]"]').selectedIndex].text;
+        const ukuran = row.querySelector('select[name="ukuran[]"]').options[row.querySelector('select[name="ukuran[]"]').selectedIndex].text;
+        const jumlah = row.querySelector('input[name="jumlah[]"]').value;
+        pesananList.push(`- ${snack.charAt(0).toUpperCase() + snack.slice(1)} | ${varian} | ${ukuran} | Jumlah: ${jumlah}`);
+      }
+    }
+
+    // Rangkai pesan WhatsApp
+    let pesan = `Assalamualaikum kak, saya mau pesan snack:\n\nNama: ${nama}\nAlamat: ${alamat}\n\nPesanan:\n${pesananList.join("\n")}\n\nTerima kasih!`;
+    let url = `https://wa.me/6282117862420?text=${encodeURIComponent(pesan)}`;
+    window.open(url, '_blank');
+  });
+});
+</script>
+</body>
+</html>
