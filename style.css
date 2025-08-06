@@ -168,12 +168,6 @@ header h1 {
     font-weight: 700;
     margin-bottom: 0.7rem;
 }
-.accent {
-    color: #ffb347 !important;
-    background: rgba(255,213,128,0.15);
-    border-radius: 6px;
-    padding: 0 0.3em;
-}
 .hero-desc {
     font-size: 1.15rem;
     color: #232526 !important;
