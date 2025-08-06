@@ -48,7 +48,7 @@ pesananForm.addEventListener('submit', function(e) {
 
     // Rangkai pesan WhatsApp
     let pesan = `Assalamualaikum kak, saya mau pesan snack:\n\nNama: ${nama}\nAlamat: ${alamat}\n\nPesanan:\n${pesananList.join("\n")}\n\nTerima kasih!`;
-    let url = `https://wa.me/6282117862420?text=${encodeURIComponent(pesan)}`;
+    let url = `https://wa.me/6281398919073?text=${encodeURIComponent(pesan)}`;
     window.open(url, '_blank');
     // Tidak tampilkan pesan sukses, biarkan user tetap di form
 });
