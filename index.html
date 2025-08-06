@@ -335,7 +335,6 @@
             <nav class="nav-glass">
                 <a href="#hero" class="nav-item">Beranda</a>
                 <a href="#produk" class="nav-item">Produk</a>
-                <a href="#kemplang" class="nav-item">Kemplang</a>
                 <a href="#pesan" class="nav-item">Pesan</a>
                 <a href="#kontak" class="nav-item">Kontak</a>
                 <a href="tentang.html" class="nav-item" target="_blank">Tentang</a>
@@ -368,15 +367,22 @@
     <!-- Blok Eksklusif Kemplang -->
     <section class="kemplang-section" id="kemplang">
         <div class="container">
-            <h2 class="section-title" style="color:#d35400;">Menu Eksklusif:</h2>
+            <h2 class="section-title" style="color:#d35400;display:flex;align-items:center;gap:0.7rem;">
+              <span class="api-anim" style="font-size:1.5em;display:inline-block;">🔥</span> Menu Eksklusif: <span style="background:#ffd700;color:#fff;padding:0.2em 0.9em;border-radius:1em;font-size:1rem;font-weight:700;margin-left:0.5em;box-shadow:0 2px 8px #ffd70044;">Limited Banget!</span>
+            </h2>
             <div class="kemplang-card" style="background:#fffbe6;border-radius:1.2rem;box-shadow:0 4px 24px rgba(0,0,0,0.10);padding:2rem 1.5rem;margin:2rem 0;display:flex;flex-wrap:wrap;align-items:center;gap:2rem;">
-                <img src="assets/kemplang.jpg" alt="Kemplang" style="width:180px;height:140px;object-fit:cover;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">
+                <img src="assets/kemplang.jpg" alt="Kemplang" style="width:110px;height:110px;object-fit:cover;border-radius:0.8rem;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;margin-bottom:0.7rem;border:2.5px solid #ffd580;">
                 <div style="flex:1;min-width:220px;">
-                    <h3 style="color:#ff9800;font-size:1.5rem;font-weight:800;margin-bottom:0.7rem;">Kemplang Gurih Asli Cikalong</h3>
-                    <div style="font-size:1.08rem;color:#444;margin-bottom:1.1rem;line-height:1.7;">Camilan legendaris khas Cikalong! Kemplang DesriCrumbs dibuat dari bahan pilihan, dipanggang renyah, dan cocok untuk semua suasana. Rasanya gurih, aromanya khas, dan bikin nagih. Wajib coba buat pecinta snack tradisional!</div>
+                    <h3 style="color:#ff9800;font-size:1.25rem;font-weight:900;margin-bottom:0.7rem;display:flex;align-items:center;gap:0.5rem;">Kemplang Gurih Asli Cikalong <span style="font-size:1.3em;">👑</span></h3>
+                    <div style="font-size:1.08rem;color:#444;margin-bottom:1.1rem;line-height:1.7;">
+                      <span style="font-weight:700;color:#d35400;">Camilan Sultan, Rasa Rakyat!</span> <br>
+                      Kemplang DesriCrumbs ini <b>legendaris</b> banget, asli Cikalong, dipanggang renyah, gurihnya nempel di lidah! <br>
+                      <span style="color:#ff9800;font-weight:700;">Awas, sekali coba bisa ketagihan! 😋</span><br>
+                      <span style="background:#ffd700;color:#fff;padding:0.1em 0.7em;border-radius:0.7em;font-size:0.98em;font-weight:700;box-shadow:0 1px 4px #ffd70022;">Stok Terbatas, buruan order sebelum kehabisan!</span>
+                    </div>
                     <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-                        <span style="background:#ffd180;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Kecil <b>Rp8.000</b></span>
-                        <span style="background:#ffd180;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Besar <b>Rp15.000</b></span>
+                        <span style="background:#fffbe6;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Kecil <b>Rp8.000</b></span>
+                        <span style="background:#fffbe6;color:#d35400;border-radius:1.1rem;padding:0.32rem 1.1rem;font-size:1.05rem;font-weight:700;border:1px solid #ffe0b2;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:inline-block;">Pack Besar <b>Rp15.000</b></span>
                     </div>
                 </div>
             </div>
@@ -445,6 +451,30 @@
     </section>
     <style>
     /* Produk Section Styling Baru */
+    /* Animasi Api Bergerak di Menu Eksklusif */
+    .api-anim {
+      animation: fireMove 1.1s infinite alternate cubic-bezier(.7,0,.3,1);
+      filter: drop-shadow(0 0 6px #ff9800cc) drop-shadow(0 0 12px #ffd70088);
+      transform-origin: bottom center;
+    }
+    @keyframes fireMove {
+      0% {
+        transform: scale(1) rotate(-7deg) translateY(0px);
+        filter: drop-shadow(0 0 6px #ff9800cc) drop-shadow(0 0 12px #ffd70088);
+      }
+      30% {
+        transform: scale(1.08,1.13) rotate(7deg) translateY(-2px);
+        filter: drop-shadow(0 0 12px #ffd700cc) drop-shadow(0 0 18px #ff980088);
+      }
+      60% {
+        transform: scale(0.97,1.05) rotate(-5deg) translateY(2px);
+        filter: drop-shadow(0 0 8px #ff9800cc) drop-shadow(0 0 16px #ffd70088);
+      }
+      100% {
+        transform: scale(1.1,1.18) rotate(8deg) translateY(-3px);
+        filter: drop-shadow(0 0 16px #ffd700cc) drop-shadow(0 0 24px #ff980088);
+      }
+    }
     .produk-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -479,6 +509,30 @@
       color: #fff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.10);
       z-index: 2;
+      animation: produkPulse 1.7s infinite cubic-bezier(.7,0,.3,1);
+      will-change: transform, box-shadow;
+    }
+    @keyframes produkPulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10), 0 0 0 0 #ffd70044;
+      }
+      30% {
+        transform: scale(1.09);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 0 12px 4px #ffd70033;
+      }
+      50% {
+        transform: scale(1.13);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.15), 0 0 18px 8px #ffd70022;
+      }
+      70% {
+        transform: scale(1.09);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.13), 0 0 12px 4px #ffd70033;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.10), 0 0 0 0 #ffd70044;
+      }
     }
     .produk-badge.gold { background: linear-gradient(90deg,#ffd700,#ff9800); color: #a65c00; }
     .produk-badge.green { background: linear-gradient(90deg,#43e97b,#38f9d7); color: #006d3c; }
@@ -609,7 +663,120 @@
                     </div>
                 </div>
                 <button type="button" id="tambahVarianBtn" class="order-btn-glass" style="margin-bottom:1rem;">+ Tambah Pilih Varian Lain</button>
+                <div id="orderSummary" style="display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-bottom:1.2rem;margin-top:0.5rem;flex-wrap:wrap;width:100%;">
+                  <span id="totalProduk" style="font-size:1.08rem;color:#d35400;font-weight:700;background:#fffbe6;padding:0.4em 1.1em;border-radius:1.2em;box-shadow:0 1px 4px #ffd70022;">Total Produk: 1</span>
+                  <span id="totalHarga" style="font-size:1.08rem;color:#d35400;font-weight:700;background:#fffbe6;padding:0.4em 1.1em;border-radius:1.2em;box-shadow:0 1px 4px #ffd70022;">Total Bayar: Rp5.000</span>
+                </div>
                 <script>
+                // Harga produk
+                const hargaProduk = {
+                  makaroni: { kecil: 5000, sedang: 10000, besar: 15000 },
+                  kemplang: { kecil: 8000, sedang: 0, besar: 15000 }
+                };
+
+                function getHarga(snack, ukuran) {
+                  if (hargaProduk[snack] && hargaProduk[snack][ukuran]) {
+                    return hargaProduk[snack][ukuran];
+                  }
+                  return 0;
+                }
+
+                function updateOrderSummary() {
+                  const rows = document.querySelectorAll('#varianContainer .form-row');
+                  let totalProduk = 0;
+                  let totalHarga = 0;
+                  rows.forEach((row, idx) => {
+                    let snack, ukuran, jumlah;
+                    if (idx === 0) {
+                      snack = document.getElementById('snack').value;
+                      ukuran = document.getElementById('ukuran').value;
+                      jumlah = parseInt(document.getElementById('jumlah').value) || 0;
+                    } else {
+                      snack = row.querySelector('select[name="snack[]"]').value;
+                      ukuran = row.querySelector('select[name="ukuran[]"]').value;
+                      jumlah = parseInt(row.querySelector('input[name="jumlah[]"]').value) || 0;
+                    }
+                    totalProduk += jumlah;
+                    totalHarga += getHarga(snack, ukuran) * jumlah;
+                  });
+                  document.getElementById('totalProduk').textContent = `Total Produk: ${totalProduk}`;
+                  document.getElementById('totalHarga').textContent = `Total Bayar: Rp${totalHarga.toLocaleString('id-ID')}`;
+                }
+
+                // Event listeners untuk update summary
+                document.getElementById('jumlah').addEventListener('input', updateOrderSummary);
+                document.getElementById('snack').addEventListener('change', updateOrderSummary);
+                document.getElementById('ukuran').addEventListener('change', updateOrderSummary);
+                document.getElementById('varian').addEventListener('change', updateOrderSummary);
+
+                // Untuk varian tambahan
+                function addSummaryListeners(row) {
+                  const jumlah = row.querySelector('input[name="jumlah[]"]');
+                  const snack = row.querySelector('select[name="snack[]"]');
+                  const ukuran = row.querySelector('select[name="ukuran[]"]');
+                  if (jumlah) jumlah.addEventListener('input', updateOrderSummary);
+                  if (snack) snack.addEventListener('change', updateOrderSummary);
+                  if (ukuran) ukuran.addEventListener('change', updateOrderSummary);
+                }
+
+
+                // Fungsi untuk menambah event listener ke semua field pada semua baris
+                function addAllSummaryListeners() {
+                  // Baris utama
+                  document.getElementById('jumlah').removeEventListener('input', updateOrderSummary);
+                  document.getElementById('snack').removeEventListener('change', updateOrderSummary);
+                  document.getElementById('ukuran').removeEventListener('change', updateOrderSummary);
+                  document.getElementById('varian').removeEventListener('change', updateOrderSummary);
+                  document.getElementById('jumlah').addEventListener('input', updateOrderSummary);
+                  document.getElementById('snack').addEventListener('change', updateOrderSummary);
+                  document.getElementById('ukuran').addEventListener('change', updateOrderSummary);
+                  document.getElementById('varian').addEventListener('change', updateOrderSummary);
+                  // Baris tambahan
+                  document.querySelectorAll('#varianContainer .form-row').forEach(function(row, idx) {
+                    if (idx === 0) return; // skip utama
+                    const jumlah = row.querySelector('input[name="jumlah[]"]');
+                    const snack = row.querySelector('select[name="snack[]"]');
+                    const ukuran = row.querySelector('select[name="ukuran[]"]');
+                    if (jumlah) {
+                      jumlah.removeEventListener('input', updateOrderSummary);
+                      jumlah.addEventListener('input', updateOrderSummary);
+                    }
+                    if (snack) {
+                      snack.removeEventListener('change', updateOrderSummary);
+                      snack.addEventListener('change', updateOrderSummary);
+                    }
+                    if (ukuran) {
+                      ukuran.removeEventListener('change', updateOrderSummary);
+                      ukuran.addEventListener('change', updateOrderSummary);
+                    }
+                    // Pastikan tombol hapus juga update summary
+                    const btnHapus = row.querySelector('.hapus-varian-btn');
+                    if (btnHapus && !btnHapus._summaryListener) {
+                      btnHapus.addEventListener('click', function() {
+                        setTimeout(function() {
+                          addAllSummaryListeners();
+                          updateOrderSummary();
+                        }, 10);
+                      });
+                      btnHapus._summaryListener = true;
+                    }
+                  });
+                }
+
+                // Override tombol tambah varian agar selalu update event listener dan summary
+                const origTambahVarianBtn = document.getElementById('tambahVarianBtn').onclick;
+                document.getElementById('tambahVarianBtn').onclick = function() {
+                  if (typeof origTambahVarianBtn === 'function') origTambahVarianBtn();
+                  addAllSummaryListeners();
+                  updateOrderSummary();
+                };
+
+                // Inisialisasi event listener pada semua baris saat halaman dimuat
+                addAllSummaryListeners();
+                updateOrderSummary();
+
+                // Inisialisasi untuk row utama
+                updateOrderSummary();
                 // Preview foto mengikuti select varian manapun yang terakhir diubah
                 function updatePreview(select) {
                     // Cek jika ada select snack di baris yang sama
@@ -680,7 +847,7 @@
                     newRow.style.alignItems = 'center';
                     newRow.innerHTML = `
                         <div class="form-group" style="flex:1;">
-                            <label>Snack</label>
+                            <label>Jenis Snack</label>
                             <select name="snack[]" required>
                                 <option value="makaroni">Makaroni</option>
                                 <option value="kemplang">Kemplang</option>
@@ -731,7 +898,23 @@
                     if (snackTambahan && selectTambahan) {
                       addSnackListener(snackTambahan, selectTambahan);
                     }
+                    // Tambahkan event listeners untuk update summary secara real-time
+                    var jumlahTambahan = newRow.querySelector('input[name="jumlah[]"]');
+                    var ukuranTambahan = newRow.querySelector('select[name="ukuran[]"]');
+                    if (jumlahTambahan) jumlahTambahan.addEventListener('input', updateOrderSummary);
+                    if (snackTambahan) snackTambahan.addEventListener('change', updateOrderSummary);
+                    if (ukuranTambahan) ukuranTambahan.addEventListener('change', updateOrderSummary);
+                    // Pastikan update summary langsung setelah tambah baris
+                    updateOrderSummary();
                 };
+                // Ubah fungsi hapus agar update summary juga
+                function addDeleteButton(row) {
+                    var btn = row.querySelector('.hapus-varian-btn');
+                    btn.addEventListener('click', function() {
+                        row.remove();
+                        updateOrderSummary();
+                    });
+                }
                 // Inisialisasi event listener pada varian utama saat halaman dimuat
                 updatePreview(varianUtama);
                 </script>
@@ -813,9 +996,39 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Rangkai pesan WhatsApp
-    let pesan = `Assalamualaikum kak, saya mau pesan snack:\n\nNama: ${nama}\nAlamat: ${alamat}\n\nPesanan:\n${pesananList.join("\n")}\n\nTerima kasih!`;
-    let url = `https://wa.me/6281398919073?text=${encodeURIComponent(pesan)}`;
-    window.open(url, '_blank');
+        // Hitung total produk dan total harga
+        let totalProduk = 0;
+        let totalHarga = 0;
+        // Baris utama
+        totalProduk += parseInt(jumlahUtama) || 0;
+        let hargaUtama = 0;
+        if (hargaProduk[snackUtama]) {
+          if (ukuranUtama.toLowerCase().includes('kecil')) hargaUtama = hargaProduk[snackUtama]['kecil'];
+          else if (ukuranUtama.toLowerCase().includes('sedang')) hargaUtama = hargaProduk[snackUtama]['sedang'];
+          else if (ukuranUtama.toLowerCase().includes('besar')) hargaUtama = hargaProduk[snackUtama]['besar'];
+        }
+        totalHarga += hargaUtama * (parseInt(jumlahUtama) || 0);
+        // Baris tambahan
+        if (rows.length > 1) {
+          for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            const snack = row.querySelector('select[name="snack[]"]').value;
+            const ukuran = row.querySelector('select[name="ukuran[]"]').options[row.querySelector('select[name="ukuran[]"]').selectedIndex].text;
+            const jumlah = parseInt(row.querySelector('input[name="jumlah[]"]').value) || 0;
+            let harga = 0;
+            if (hargaProduk[snack]) {
+              if (ukuran.toLowerCase().includes('kecil')) harga = hargaProduk[snack]['kecil'];
+              else if (ukuran.toLowerCase().includes('sedang')) harga = hargaProduk[snack]['sedang'];
+              else if (ukuran.toLowerCase().includes('besar')) harga = hargaProduk[snack]['besar'];
+            }
+            totalProduk += jumlah;
+            totalHarga += harga * jumlah;
+          }
+        }
+
+        let pesan = `Assalamualaikum kak, saya mau pesan snack:\n\nNama: ${nama}\nAlamat: ${alamat}\n\nPesanan:\n${pesananList.join("\n")}\n\nTotal Produk: ${totalProduk}\nTotal Bayar: Rp${totalHarga.toLocaleString('id-ID')}\n\nTerima kasih!`;
+        let url = `https://wa.me/6281398919073?text=${encodeURIComponent(pesan)}`;
+        window.open(url, '_blank');
   });
 });
 </script>
