@@ -6,26 +6,44 @@
     <title>Tentang DesriCrumbs</title>
     <link rel="stylesheet" href="style.css">
     <style>
+    body {
+        background: url('assets/background1.jpg') center center/cover no-repeat #fffbe6 !important;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+    .tentang-bg-svg {
+        position: absolute;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        z-index: 0;
+        opacity: 0.12;
+        pointer-events: none;
+    }
     .tentang-container {
         max-width: 700px;
         margin: 3rem auto;
-        background: #fffbe6;
+        background: rgba(255,255,255,0.97);
         border-radius: 1.2rem;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        box-shadow: 0 4px 24px #ffd70022, 0 1.5px 8px #d3540012;
         padding: 2.5rem 2rem;
         text-align: center;
+        position: relative;
+        z-index: 1;
+        backdrop-filter: blur(1.5px);
     }
     .tentang-title {
         color: #d35400;
         font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 1.2rem;
+        text-shadow: 0 2px 12px #ffd70033;
     }
     .tentang-desc {
         font-size: 1.15rem;
-        color: #444;
+        color: #6d4c1b;
         margin-bottom: 2rem;
-        line-height: 1.7;
+        line-height: 1.8;
+        text-align: left;
     }
     .tentang-img {
         width: 180px;
@@ -34,23 +52,8 @@
         border-radius: 50%;
         margin-bottom: 1.2rem;
         box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+        border: 4px solid #ffd70044;
     }
-    </style>
-</head>
-<body>
-    <body style="background: url('assets/background1.jpg') center center/cover no-repeat #fffbe6; min-height: 100vh;">
-    <div class="tentang-container">
-        <img src="assets/Logobisnis.jpg" alt="Logo DesriCrumbs" class="tentang-img">
-        <h1 class="tentang-title">Tentang DesriCrumbs</h1>
-        <div class="tentang-desc">
-            <p><b>DesriCrumbs</b> adalah brand camilan makaroni kekinian dari Bandung yang mengutamakan rasa, kualitas, dan inovasi. Kami hadir dengan berbagai varian rasa unik, kemasan premium, dan harga terjangkau untuk semua kalangan.</p>
-            <p>Setiap produk dibuat dengan bahan pilihan, proses higienis, dan cita rasa yang selalu fresh. Kami siap melayani pemesanan eceran maupun partai besar untuk acara, hampers, atau reseller.</p>
-            <p><b>Alamat:</b> Cikalong, Bandung<br>
-            <b>Pengiriman:</b> Seluruh Indonesia<br>
-            <b>Kontak:</b> <a href="https://wa.me/6281398919073?text=assalamualaikum%20kak%2C%20saya%20mau%20bekerja%20sama" target="_blank">WhatsApp</a> | <a href="mailto:info@desricrumbs.com">Email</a></p>
-        </div>
-       
-    <style>
     .order-btn-glass {
       background: #ff9800 !important;
       color: #fff !important;
@@ -68,7 +71,42 @@
     .order-btn-glass:hover {
       background: #e67e22 !important;
     }
+    @media (max-width: 600px) {
+      .tentang-container { padding: 1.2rem 0.5rem; }
+      .tentang-title { font-size: 1.3rem; }
+      .tentang-desc { font-size: 1rem; }
+      .tentang-img { width: 110px; height: 110px; }
+    }
     </style>
+</head>
+<body>
+    <svg class="tentang-bg-svg" viewBox="0 0 800 600" preserveAspectRatio="none">
+      <defs>
+        <pattern id="makaroniPattern" patternUnits="userSpaceOnUse" width="120" height="60">
+          <ellipse cx="30" cy="30" rx="28" ry="12" fill="#ffd180"/>
+          <ellipse cx="90" cy="15" rx="18" ry="7" fill="#ffe0b2"/>
+          <ellipse cx="60" cy="50" rx="16" ry="6" fill="#ffecb3"/>
+        </pattern>
+      </defs>
+      <rect width="800" height="600" fill="url(#makaroniPattern)"/>
+    </svg>
+    <div class="tentang-container">
+        <img src="assets/Logobisnis.jpg" alt="Logo DesriCrumbs" class="tentang-img">
+        <h1 class="tentang-title">Tentang DesriCrumbs</h1>
+        <div class="tentang-desc">
+            <p><b>DesriCrumbs</b> bukan sekadar brand makaroni, tapi perjalanan rasa dan mimpi dari dapur kecil di Cikalong ke seluruh Indonesia.</p>
+            <p>Awalnya, makaroni ini hanya jadi camilan keluarga—teman nonton, belajar, dan kumpul bareng. Tapi berkat semangat, inovasi, dan dukungan pelanggan, kini DesriCrumbs hadir dengan berbagai varian rasa unik, kemasan premium, dan harga yang ramah di kantong.</p>
+            <p>Setiap makaroni dibuat dengan bahan pilihan, proses higienis, dan bumbu spesial yang diracik penuh cinta. Kami percaya, camilan enak itu bukan cuma soal rasa, tapi juga soal kebersamaan, cerita, dan kenangan yang tercipta di setiap gigitan.</p>
+            <p>Kami siap melayani pemesanan eceran, partai besar untuk acara, hampers, hingga reseller. Setiap pesananmu adalah dukungan untuk usaha rumahan dan mimpi-mimpi kecil di desa.</p>
+            <p style="background:#fffbe6;border-radius:0.7em;padding:0.7em 1em;margin:1.2em 0 0.7em 0;color:#d35400;font-weight:600;text-align:center;box-shadow:0 1px 4px #ffd70022;">
+              "Cobain makaroni DeSri, dan rasakan sendiri kenapa banyak yang bilang: <span style='color:#ff9800;font-weight:700;'>ngemil jadi lebih seru dan nagih!</span>"
+            </p>
+            <div style="margin-top:1.2em;font-size:1.05em;">
+              <b>Alamat:</b> Cikalong, Bandung<br>
+              <b>Pengiriman:</b> Seluruh Indonesia<br>
+              <b>Kontak:</b> <a href="https://wa.me/6281398919073?text=assalamualaikum%20kak%2C%20saya%20mau%20bekerja%20sama" target="_blank">WhatsApp</a> | <a href="mailto:info@desricrumbs.com">Email</a>
+            </div>
+        </div>
       <div style="display:flex;justify-content:center;">
         <a href="index.html" class="order-btn-glass">Kembali ke Beranda</a>
       </div>
